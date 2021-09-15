@@ -5,7 +5,7 @@ import { genreCreationDTO } from '../genres';
 @Component({
   selector: 'app-form-genre',
   templateUrl: './form-genre.component.html',
-  styleUrls: ['./form-genre.component.css']
+  styleUrls: ['./form-genre.component.scss']
 })
 export class FormGenreComponent implements OnInit {
 

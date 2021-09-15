@@ -6,7 +6,7 @@ import { genreCreationDTO } from '../genres';
 @Component({
   selector: 'app-create-genre',
   templateUrl: './create-genre.component.html',
-  styleUrls: ['./create-genre.component.css']
+  styleUrls: ['./create-genre.component.scss']
 })
 export class CreateGenreComponent implements OnInit {
 

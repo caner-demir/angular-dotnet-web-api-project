@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { genreCreationDTO } from '../genres';
+import { genreCreationDTO } from '../genres.model';
 
 @Component({
   selector: 'app-form-genre',
@@ -31,11 +31,11 @@ export class FormGenreComponent implements OnInit {
     }
   }
 
-  saveChanges(){
+  saveChanges(): void{
     this.onSaveChanges.emit(this.form.value);
   }
 
-  getErrorMessageFieldName(){
+  getErrorMessageFieldName(): string{
     const field = this.form.get('name');
 
     if(field?.hasError('required')){

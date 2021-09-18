@@ -12,31 +12,31 @@ export class FormGenreComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   @Input()
-  model!: genreCreationDTO
+  modelGenre!: genreCreationDTO
 
-  form!: FormGroup;
+  formGenre!: FormGroup;
 
   @Output()
   onSaveChanges: EventEmitter<genreCreationDTO> = new EventEmitter<genreCreationDTO>();
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
+    this.formGenre = this.formBuilder.group({
       name: ['', {
         validators: [Validators.required, Validators.minLength(2)]
       }]
     });
 
-    if(this.model !== undefined){
-      this.form.patchValue(this.model);
+    if(this.modelGenre !== undefined){
+      this.formGenre.patchValue(this.modelGenre);
     }
   }
 
   saveChanges(): void{
-    this.onSaveChanges.emit(this.form.value);
+    this.onSaveChanges.emit(this.formGenre.value);
   }
 
   getErrorMessageFieldName(): string{
-    const field = this.form.get('name');
+    const field = this.formGenre.get('name');
 
     if(field?.hasError('required')){
       return 'The Name field is required.';

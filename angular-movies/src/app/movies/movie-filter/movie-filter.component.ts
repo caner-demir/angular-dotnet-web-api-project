@@ -31,7 +31,7 @@ export class MovieFilterComponent implements OnInit {
       genreId: 0,
       isInUpcomingReleases: false,
       isInTheaters: false,
-    })
+    });
 
     this.form.valueChanges
       .subscribe(values => {

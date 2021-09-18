@@ -11,7 +11,7 @@ export class EditGenreComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
-  model: genreCreationDTO = {name: 'Drama'};
+  loadModel: genreCreationDTO = {name: 'Drama'};
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {

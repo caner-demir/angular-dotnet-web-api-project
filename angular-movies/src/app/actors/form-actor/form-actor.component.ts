@@ -25,7 +25,8 @@ export class FormActorComponent implements OnInit {
         validators: [Validators.required]
       }],
       dateOfBirth: '',
-      picture: ''
+      picture: '',
+      biography: ''
     });
 
     if(this.modelActor !== undefined){
@@ -33,12 +34,16 @@ export class FormActorComponent implements OnInit {
     }
   }
 
-  onImageSelected(image){
-    this.formActor.get('picture')?.setValue(image);
-  }
-
   saveChanges(){
     this.onSaveChanges.emit(this.formActor.value);
   };
+  
+  onImageSelected(image){
+    this.formActor.get('picture')?.setValue(image);
+  };
+
+  onChangeMarkdown(content: string){
+    this.formActor.get('biography')?.setValue(content);
+  }
 
 }

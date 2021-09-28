@@ -11,7 +11,8 @@ export class EditActorComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute) {
     this.loadModel = new actorDTO('Tom Holland', new Date(), 
-      'https://m.media-amazon.com/images/M/MV5BOWQ3ZjNkY2MtZGVlMi00ZThhLTgwMWMtM2ZlZDQ4OTVmMjgzXkEyXkFqcGdeQXVyNjIzMDA2NjE@._V1_.jpg');
+      'https://m.media-amazon.com/images/M/MV5BOWQ3ZjNkY2MtZGVlMi00ZThhLTgwMWMtM2ZlZDQ4OTVmMjgzXkEyXkFqcGdeQXVyNjIzMDA2NjE@._V1_.jpg',
+      'default value');
   }
 
   loadModel!: baseActor;

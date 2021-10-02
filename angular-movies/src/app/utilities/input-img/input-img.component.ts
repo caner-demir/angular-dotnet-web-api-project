@@ -13,7 +13,7 @@ export class InputImgComponent implements OnInit {
   imageBase64!: string;
 
   @Input()
-  urlCurrentImage!: string | null;
+  urlCurrentImage: string | undefined;
 
   @Output()
   onImageSelected = new EventEmitter<File>()
@@ -26,7 +26,7 @@ export class InputImgComponent implements OnInit {
       const file: File = event.target.files[0];
       toBase64(file).then((value: string) => this.imageBase64 = value);
       this.onImageSelected.emit(file);
-      this.urlCurrentImage = null;
+      this.urlCurrentImage = undefined;
     }
   }
 

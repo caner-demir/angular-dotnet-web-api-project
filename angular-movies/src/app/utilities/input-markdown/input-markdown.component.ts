@@ -10,7 +10,7 @@ export class InputMarkdownComponent implements OnInit {
   constructor() { }
 
   @Input()
-  markdownContent: string = '';
+  markdownContent: string | undefined;
 
   @Output()
   onChangeMarkdown: EventEmitter<string> = new EventEmitter<string>();

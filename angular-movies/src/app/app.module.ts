@@ -33,6 +33,7 @@ import { GenericListComponent } from './utilities/generic-list/generic-list.comp
 
 import { MarkdownModule } from 'ngx-markdown';
 import { LeafletModule} from '@asymmetrik/ngx-leaflet';
+import { FormMovieComponent } from './movies/form-movie/form-movie.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { LeafletModule} from '@asymmetrik/ngx-leaflet';
     InputImgComponent,
     InputMarkdownComponent,
     MovieTheaterFormComponent,
-    MapComponent
+    MapComponent,
+    FormMovieComponent
   ],
   imports: [
     BrowserModule,

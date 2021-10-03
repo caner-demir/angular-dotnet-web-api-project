@@ -34,6 +34,7 @@ import { GenericListComponent } from './utilities/generic-list/generic-list.comp
 import { MarkdownModule } from 'ngx-markdown';
 import { LeafletModule} from '@asymmetrik/ngx-leaflet';
 import { FormMovieComponent } from './movies/form-movie/form-movie.component';
+import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { FormMovieComponent } from './movies/form-movie/form-movie.component';
     InputMarkdownComponent,
     MovieTheaterFormComponent,
     MapComponent,
-    FormMovieComponent
+    FormMovieComponent,
+    MultipleSelectorComponent
   ],
   imports: [
     BrowserModule,

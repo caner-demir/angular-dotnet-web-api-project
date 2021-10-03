@@ -5,15 +5,17 @@ export class movieCreationDTO implements movieBase {
     inTheaters: boolean;
     releaseDate: Date;
     trailer: string;
+    genresIds: number[];
 
     constructor(title: string, summary: string, poster: File, inTheaters: boolean,
-        releaseDate: Date, trailer: string) {
+        releaseDate: Date, trailer: string, genresIds: number[]) {
             this.title = title;
             this.summary = summary;
             this.poster = poster;
             this.inTheaters = inTheaters;
             this.releaseDate = releaseDate;
             this.trailer = trailer;
+            this.genresIds = genresIds;
     }    
 }
 
@@ -26,7 +28,7 @@ export class movieDTO implements movieBase {
     trailer: string;
 
     constructor(title: string, summary: string, poster: string, inTheaters: boolean,
-        releaseDate: Date, trailer: string) {
+        releaseDate: Date, trailer: string, genresIds: number[]) {
             this.title = title;
             this.summary = summary;
             this.poster = poster;
@@ -43,24 +45,3 @@ export interface movieBase {
     releaseDate: Date;
     trailer: string;
 }
-
-
-/*
-export interface movieCreationDTO {
-    title: string;
-    summary: string;
-    poster: File;
-    inTheaters: boolean;
-    releaseDate: Date;
-    trailer: string;  
-}
-
-export interface movieDTO {
-    title: string;
-    summary: string;
-    poster: string;
-    inTheaters: boolean;
-    releaseDate: Date;
-    trailer: string; 
-}
-*/

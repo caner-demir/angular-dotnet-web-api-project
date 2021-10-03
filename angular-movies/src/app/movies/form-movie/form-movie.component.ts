@@ -29,6 +29,14 @@ export class FormMovieComponent implements OnInit {
 
   selectedGenres: multipleSelectorModel[] = [];
 
+  nonSelectedMovieTheaters: multipleSelectorModel[] = [
+    {key: 1, value: 'Ankamall'},
+    {key: 2, value: 'Armada'},
+    {key: 3, value: 'Taurus'}
+  ];
+
+  selectedMovieTheaters: multipleSelectorModel[] = []
+
   ngOnInit(): void {
     this.formMovie = this.formBuilder.group({
       title: ['', {
@@ -39,7 +47,8 @@ export class FormMovieComponent implements OnInit {
       trailer: '',
       releaseDate: '',
       poster: '',
-      genresIds: ''
+      genresIds: '',
+      movieTheatersIds: ''
     })
 
     if(this.modelMovie !== undefined){
@@ -58,6 +67,9 @@ export class FormMovieComponent implements OnInit {
   saveChanges(){
     const genresIds = this.selectedGenres.map(value => value.key);
     this.formMovie.get('genresIds')?.setValue(genresIds);
+
+    const movieTheatersIds = this.selectedMovieTheaters.map(value => value.key);
+    this.formMovie.get('movieTheatersIds')?.setValue(movieTheatersIds);
     this.onSaveChanges.emit(this.formMovie.value);
   }
 

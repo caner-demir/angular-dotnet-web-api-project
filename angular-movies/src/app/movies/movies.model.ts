@@ -6,9 +6,10 @@ export class movieCreationDTO implements movieBase {
     releaseDate: Date;
     trailer: string;
     genresIds: number[];
+    movieTheaterIds: number[]
 
     constructor(title: string, summary: string, poster: File, inTheaters: boolean,
-        releaseDate: Date, trailer: string, genresIds: number[]) {
+        releaseDate: Date, trailer: string, genresIds: number[], movieTheaterIds: number[]) {
             this.title = title;
             this.summary = summary;
             this.poster = poster;
@@ -16,6 +17,7 @@ export class movieCreationDTO implements movieBase {
             this.releaseDate = releaseDate;
             this.trailer = trailer;
             this.genresIds = genresIds;
+            this.movieTheaterIds = movieTheaterIds;
     }    
 }
 

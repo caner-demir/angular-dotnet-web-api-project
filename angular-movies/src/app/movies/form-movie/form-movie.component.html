@@ -25,9 +25,13 @@
     <h4>Summary</h4>
     <app-input-markdown [markdownContent]="modelMovie?.summary"
         (onChangeMarkdown)="changeMarkdown($event)"></app-input-markdown>
+
     <h4>Select the Genres</h4>
     <app-multiple-selector [nonSelectedItems]="nonSelectedGenres"
     [selectedItems]="selectedGenres"></app-multiple-selector>
+    <h4>Select the Movie Theaters</h4>
+    <app-multiple-selector [nonSelectedItems]="nonSelectedMovieTheaters"
+    [selectedItems]="selectedMovieTheaters"></app-multiple-selector>
 
     <div>
         <button mat-flat-button color="primary" [disabled]="formMovie.invalid">Save Changes</button>
